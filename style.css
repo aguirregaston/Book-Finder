@@ -1,0 +1,94 @@
+:root {
+  --bg-one: #0f0f14;
+  --bg-two: #0f0f10;
+  --active: #d2f400;
+  --white: #fff;
+  --gray: #3a3a4d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top, var(--bg-one), var(--bg-two));
+  color: var(--white);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-weight: 300;
+}
+
+.search-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background: var(--gray);
+  color: var(--white);
+}
+
+.search-bar button {
+  width: 20%;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background: var(--active);
+  color: var(--bg-one);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.results {
+  width: 600px;
+  height: 300px;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  border-bottom: 1px solid var(--gray);
+  border-left: 1px solid var(--gray);
+  padding: 5px;
+}
+
+.book {
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+.book img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
